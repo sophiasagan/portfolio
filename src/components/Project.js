@@ -11,7 +11,7 @@ const Project = ({ description, title, github, url, stack, image, index }) => {
       )}
       <div className="project-info">
         <span className="project-number">0{index + 1}.</span>
-        <h3>{title || "default title"}</h3>
+        <h3>{title || "Project In Progress"}</h3>
         <p className="project-desc">{description}</p>
         <div className="project-stack">
           {stack.map(item => {
@@ -31,6 +31,14 @@ const Project = ({ description, title, github, url, stack, image, index }) => {
   )
 }
 
-Project.propTypes = {}
+Project.propTypes = {
+  title: PropTypes.string.isRequired,
+  github: PropTypes.string.isRequired,
+  url: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  image: PropTypes.object.isRequired,
+  stack: PropTypes.arrayOf(PropTypes.object).isRequired,
+
+}
 
 export default Project
