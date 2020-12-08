@@ -14,30 +14,30 @@ Variables
 :root {
   /* dark shades of primary color*/
   /* --clr-primary-1: hsl(43, 86%, 17%); */
-  --clr-primary-1: hsl(184, 91%, 17%);
-  --clr-primary-2: hsl(185, 84%, 25%);
-  --clr-primary-3: hsl(185, 81%, 29%);
-  --clr-primary-4: hsl(184, 77%, 34%);
-  --clr-primary-5: #2caeba;
+  --clr-primary-1: hsl(226, 91%, 17%);
+  --clr-primary-2: hsl(227, 84%, 25%);
+  --clr-primary-3: hsl(227, 81%, 29%);
+  --clr-primary-4: hsl(226, 77%, 34%);
+  --clr-primary-5: #42528C;
   /* lighter shades of primary color */
-  --clr-primary-6: hsl(185, 57%, 50%);
-  --clr-primary-7: hsl(184, 65%, 59%);
-  --clr-primary-8: hsl(184, 80%, 74%);
-  --clr-primary-9: hsl(185, 94%, 87%);
-  --clr-primary-10: hsl(186, 100%, 94%);
-  /* darkest grey - used for headings */
-  --clr-grey-1: hsl(209, 61%, 16%);
-  --clr-grey-3: hsl(209, 34%, 30%);
-  --clr-grey-4: hsl(209, 28%, 39%);
-  /* grey used for paragraphs */
-  --clr-grey-5: hsl(210, 22%, 49%);
-  --clr-grey-8: hsl(210, 31%, 80%);
-  --clr-grey-9: hsl(212, 33%, 89%);
-  --clr-grey-10: hsl(210, 36%, 96%);
+  --clr-primary-6: hsl(227, 57%, 50%);
+  --clr-primary-7: hsl(226, 65%, 59%);
+  --clr-primary-8: hsl(226, 80%, 74%);
+  --clr-primary-9: hsl(227, 94%, 87%);
+  --clr-primary-10: hsl(228, 100%, 94%);
+  /* darkest burgundy - used for headings */
+  --clr-burgundy-1: hsl(317, 61%, 16%);
+  --clr-burgundy-3: hsl(317, 34%, 30%);
+  --clr-burgundy-4: hsl(317, 28%, 39%);
+  /* burgundy used for paragraphs */
+  --clr-burgundy-5: hsl(318, 22%, 49%);
+  --clr-burgundy-8: hsl(318, 31%, 80%);
+  --clr-burgundy-9: hsl(309, 33%, 89%);
+  --clr-burgundy-10: hsl(318, 36%, 96%);
   --clr-green-dark: hsl(125, 67%, 35%);
   --clr-red-dark: hsl(360, 67%, 44%);
   --clr-red-light: hsl(360, 71%, 66%);
-  --clr-white: #fff;
+  --clr-white:   #f6f9fa;
   --ff-primary: "Roboto", sans-serif;
   --ff-secondary: "Open Sans", sans-serif;
   --transition: all 0.3s linear;
@@ -64,7 +64,7 @@ Global Styles
 body {
   font-family: var(--ff-secondary);
   background: var(--clr-white);
-  color: var(--clr-grey-1);
+  color: var(--clr-burgundy-1);
   line-height: 1.5;
   font-size: 0.875rem;
   margin-top: 5rem;
@@ -100,7 +100,7 @@ h4 {
 }
 p {
   margin-bottom: 1.25rem;
-  color: var(--clr-grey-3);
+  color: var(--clr-burgundy-3);
 }
 @media screen and (min-width: 800px) {
   h1 {
@@ -182,8 +182,8 @@ p {
   margin-bottom: 4rem;
   text-align: center;
 }
-.bg-grey {
-  background: var(--clr-grey-10);
+.bg-burgundy {
+  background: var(--clr-burgundy-10);
 }
 /* page links */
 
@@ -196,7 +196,7 @@ p {
 }
 .social-link {
   font-size: 1.75rem;
-  color: var(--clr-grey-1);
+  color: var(--clr-burgundy-1);
   transition: var(--transition);
 }
 .social-link:hover {
@@ -263,7 +263,7 @@ Navbar
   }
   .nav-links a {
     text-transform: capitalize;
-    color: var(--clr-grey-1);
+    color: var(--clr-burgundy-1);
     font-weight: bold;
     letter-spacing: var(--spacing);
     transition: var(--transition);
@@ -291,7 +291,7 @@ Sidebar
 ===============
 */
 .sidebar {
-  background: var(--clr-grey-10);
+  background: var(--clr-burgundy-10);
   position: fixed;
   top: 0;
   left: 0;
@@ -315,7 +315,7 @@ Sidebar
   display: block;
   text-align: center;
   text-transform: capitalize;
-  color: var(--clr-grey-5);
+  color: var(--clr-burgundy-5);
   letter-spacing: var(--spacing);
   margin-bottom: 0.5rem;
   font-size: 2rem;
@@ -435,7 +435,7 @@ Hero
   display: none;
 }
 .hero-info h4 {
-  color: var(--clr-grey-5);
+  color: var(--clr-burgundy-5);
 }
 .hero-icons {
   justify-items: flex-start;
@@ -449,10 +449,10 @@ Hero
     content: "";
     position: absolute;
     top: 0;
-    left: 65%;
+    /* left: 65%; */
     right: 0;
     bottom: 0;
-    background: var(--clr-white);
+    /* background: var(--clr-white); */
   }
   .hero-center {
     grid-template-columns: repeat(12, 1fr);
@@ -583,8 +583,8 @@ Jobs
 }
 .job-info h4 {
   text-transform: uppercase;
-  color: var(--clr-grey-5);
-  background: var(--clr-grey-9);
+  color: var(--clr-burgundy-5);
+  background: var(--clr-burgundy-9);
   display: inline-block;
   padding: 0.375rem 0.75rem;
   border-radius: var(--radius);
@@ -601,7 +601,7 @@ Jobs
 }
 .job-desc p {
   margin-bottom: 0;
-  color: var(--clr-grey-3);
+  color: var(--clr-burgundy-3);
 }
 .job-icon {
   color: var(--clr-primary-5);
@@ -634,7 +634,7 @@ Projects
 ===============
 */
 .projects {
-  background: var(--clr-grey-10);
+  background: var(--clr-burgundy-10);
 }
 .project {
   display: grid;
@@ -679,7 +679,7 @@ Projects
 }
 .project-desc {
   word-spacing: 15px;
-  color: var(--clr-grey-3);
+  color: var(--clr-burgundy-3);
 }
 .project-stack {
   margin-bottom: 1rem;
@@ -687,8 +687,8 @@ Projects
 .project-stack span,
 .about-stack span {
   display: inline-block;
-  background: var(--clr-grey-9);
-  color: var(--clr-grey-5);
+  background: var(--clr-burgundy-9);
+  color: var(--clr-burgundy-5);
   margin-right: 0.5rem;
   padding: 0.25rem 0.5rem;
   border-radius: var(--radius);
@@ -758,7 +758,7 @@ Blog
 .blog {
   display: block;
   margin-bottom: 2rem;
-  background: var(--clr-grey-10);
+  background: var(--clr-burgundy-10);
   border-radius: var(--radius);
   box-shadow: var(--light-shadow);
   transition: var(--transition);
@@ -785,7 +785,7 @@ Blog
   padding: 1.5rem 1rem;
 }
 .blog-card h4 {
-  color: var(--clr-grey-1);
+  color: var(--clr-burgundy-1);
 }
 
 .blog-footer {
@@ -796,12 +796,12 @@ Blog
 .blog-footer p {
   margin-bottom: 0;
   font-weight: bold;
-  color: var(--clr-grey-5);
+  color: var(--clr-burgundy-5);
 }
 .blog-footer p:first-of-type {
   display: inline-block;
-  background: var(--clr-grey-9);
-  color: var(--clr-grey-5);
+  background: var(--clr-burgundy-9);
+  color: var(--clr-burgundy-5);
   margin-right: 0.5rem;
   padding: 0.25rem 0.5rem;
   border-radius: var(--radius);
@@ -866,7 +866,7 @@ Pages
 .error-page,
 .about-page,
 .contact-page {
-  background: var(--clr-grey-10);
+  background: var(--clr-burgundy-10);
   min-height: calc(100vh - 5rem - 9rem);
 }
 .error-page {
@@ -922,7 +922,7 @@ About Page
   display: flex;
   align-items: center;
   letter-spacing: 1px;
-  color: var(--clr-grey-4);
+  color: var(--clr-burgundy-4);
 }
 .stack-icon {
   color: var(--clr-primary-5);
@@ -968,7 +968,7 @@ Contact Page
 }
 .contact-form h3 {
   padding-top: 1.25rem;
-  color: var(--clr-grey-5);
+  color: var(--clr-burgundy-5);
 }
 .form-group {
   padding: 1rem 1.5rem;
@@ -979,14 +979,14 @@ Contact Page
   padding: 0.75rem 1rem;
   border: none;
   margin-bottom: 1.25rem;
-  background: var(--clr-grey-10);
+  background: var(--clr-burgundy-10);
   border-radius: var(--radius);
   text-transform: uppercase;
   letter-spacing: var(--spacing);
 }
 .form-control::placeholder {
   font-family: var(--ff-primary);
-  color: var(--clr-grey-1);
+  color: var(--clr-burgundy-1);
   text-transform: uppercase;
   letter-spacing: var(--spacing);
 }
@@ -1017,8 +1017,8 @@ Blog Template
   display: inline-block;
 }
 .blog-template ul li {
-  background: var(--clr-grey-9);
-  color: var(--clr-grey-5);
+  background: var(--clr-burgundy-9);
+  color: var(--clr-burgundy-5);
   padding: 0.5rem 1rem;
   margin: 1rem 0;
   text-transform: uppercase;
