@@ -33,18 +33,19 @@ Variables
   --clr-burgundy-5: hsl(318, 22%, 49%);
   --clr-burgundy-8: hsl(318, 31%, 80%);
   --clr-burgundy-9: hsl(309, 33%, 89%);
-  --clr-burgundy-10: hsl(318, 36%, 96%);
+  --clr-burgundy-10: url("https://www.toptal.com/designers/subtlepatterns/patterns/hexellence.png");
   --clr-green-dark: hsl(125, 67%, 35%);
   --clr-red-dark: hsl(360, 67%, 44%);
   --clr-red-light: hsl(360, 71%, 66%);
-  --clr-white:  #f8f8ff;
+  --clr-white:  url("https://www.toptal.com/designers/subtlepatterns/patterns/hexellence.png");
+  --white: white;
   --ff-primary: "Roboto", sans-serif;
   --ff-secondary: "Open Sans", sans-serif;
   --transition: all 0.3s linear;
   --spacing: 0.2rem;
   --radius: 0.25rem;
   --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  --dark-shadow: 0 19px 38px rgba(0,0,0,0.30);
   --max-width: 1170px;
   --fixed-width: 700px;
 }
@@ -68,6 +69,7 @@ body {
   line-height: 1.5;
   font-size: 0.875rem;
   margin-top: 5rem;
+ 
 }
 ul {
   list-style-type: none;
@@ -414,7 +416,7 @@ Hero
   margin-top: -5rem;
   padding-top: 5rem;
   height: 100vh;
-  background: var(--clr-primary-10);
+  background: url("https://www.toptal.com/designers/subtlepatterns/patterns/hexellence.png");
   position: relative;
 }
 
@@ -429,7 +431,7 @@ Hero
   margin-left: 0;
 }
 .hero-info {
-  background: var(--clr-primary-10);
+  background: url("https://www.toptal.com/designers/subtlepatterns/patterns/hexellence.png");
 }
 .hero-img {
   display: none;
@@ -453,6 +455,7 @@ Hero
     right: 0;
     bottom: 0;
     /* background: var(--clr-white); */
+    
   }
   .hero-center {
     grid-template-columns: repeat(12, 1fr);
@@ -634,8 +637,25 @@ Projects
 ===============
 */
 .projects {
-  background: var(--clr-burgundy-10);
+  background: var(--clr-white);
+  animation: pulsecolor 6s ease infinite;
 }
+
+@keyframes pulsecolor {
+  0% {
+    background:linear-gradient(0.50turn, transparent, #3495fe,transparent), url("https://www.toptal.com/designers/subtlepatterns/patterns/hexellence.png");
+  }
+  33% {
+    background: linear-gradient(0.50turn, transparent, #2580B3,transparent), url("https://www.toptal.com/designers/subtlepatterns/patterns/hexellence.png");
+  }
+  67% {
+    background: linear-gradient(0.50turn, transparent, #3f87a6,transparent), url("https://www.toptal.com/designers/subtlepatterns/patterns/hexellence.png");
+  }
+  100% {
+    background:linear-gradient(0.50turn, transparent, #3495fe,transparent), url("https://www.toptal.com/designers/subtlepatterns/patterns/hexellence.png");
+  }
+}
+
 .project {
   display: grid;
   margin-bottom: 4rem;
@@ -684,6 +704,9 @@ Projects
 .project-stack {
   margin-bottom: 1rem;
 }
+.about-stack {
+  margin-bottom: 2rem;
+}
 .project-stack span,
 .about-stack span {
   display: inline-block;
@@ -730,6 +753,7 @@ Projects
     height: 30rem;
     border-radius: var(--radius);
     box-shadow: var(--dark-shadow);
+    
   }
   .project-info {
     border-radius: var(--radius);
@@ -758,7 +782,7 @@ Blog
 .blog {
   display: block;
   margin-bottom: 2rem;
-  background: var(--clr-burgundy-10);
+  background: var(--clr-white);
   border-radius: var(--radius);
   box-shadow: var(--light-shadow);
   transition: var(--transition);
@@ -832,14 +856,14 @@ Footer
 */
 .footer {
   height: 9rem;
-  background: #222;
+  background: url(https://www.toptal.com/designers/subtlepatterns/patterns/country-quilt-dark.png);
   text-align: center;
   display: grid;
   place-items: center;
 }
 .footer h4 {
   margin-top: 0.5rem;
-  color: var(--clr-white);
+  color: var(--white);
   font-weight: normal;
   text-transform: uppercase;
 }
@@ -850,7 +874,7 @@ Footer
   margin: 0 auto 1rem auto;
 }
 .footer .social-link {
-  color: var(--clr-white);
+  color: var(--white);
 }
 .footer .social-link:hover {
   color: var(--clr-primary-5);
@@ -979,7 +1003,7 @@ Contact Page
   padding: 0.75rem 1rem;
   border: none;
   margin-bottom: 1.25rem;
-  background: var(--clr-burgundy-10);
+  background:#c3cfe2;
   border-radius: var(--radius);
   text-transform: uppercase;
   letter-spacing: var(--spacing);
@@ -1011,6 +1035,11 @@ Blog Template
 .blog-template h1,
 .blog-template h2 {
   text-align: center;
+  margin: 1em;
+}
+
+.blog-template h3 {
+  margin: .5em;
 }
 .blog-template ul {
   margin-top: 2rem;
@@ -1025,8 +1054,10 @@ Blog Template
 }
 
 .blog-template blockquote {
-  background: var(--clr-primary-9);
-  border-radius: var(--radius);
+  /* background: var(--clr-primary-9); */
+  /* border-radius: var(--radius); */
+  background: linear-gradient(45deg, #dbe2ff, transparent);
+  border-left: 5px solid darkblue;
   padding: 1rem;
   line-height: 2;
   color: var(--clr-primary-5);
@@ -1043,4 +1074,8 @@ Blog Template
   width: 15rem;
   height: 15rem;
   margin: 3rem 0;
+}
+
+.blog-template > p {
+  margin: 0 0 1.15em;
 }
