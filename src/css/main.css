@@ -1042,15 +1042,16 @@ Blog Template
   margin: .5em;
 }
 .blog-template ul {
-  margin-top: 2rem;
+  /* margin-top: .5rem; */
   display: inline-block;
 }
 .blog-template ul li {
-  background: var(--clr-burgundy-9);
-  color: var(--clr-burgundy-5);
+  /* background: var(--clr-burgundy-9);
+  color: var(--clr-burgundy-5); */
+  list-style-type: circle;
   padding: 0.5rem 1rem;
   margin: 1rem 0;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
 }
 
 .blog-template blockquote {
@@ -1071,9 +1072,14 @@ Blog Template
   border-radius: var(--radius);
 }
 .blog-template img {
-  width: 15rem;
+  /* width: 15rem;
   height: 15rem;
-  margin: 3rem 0;
+  margin: 3rem 0; */
+  /* align-content: center; */
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
 }
 
 .blog-template > p {
